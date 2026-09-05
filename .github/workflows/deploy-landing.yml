@@ -1,12 +1,18 @@
-name: Build and Deploy Landing
+name: Deploy Landing
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+concurrency:
+  group: landing-production
+  cancel-in-progress: true
 
 jobs:
   deploy:
+    name: Build and Deploy Landing
     runs-on: ubuntu-latest
 
     steps:
@@ -22,19 +28,38 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build production
+        env:
+          VITE_API_BASE_URL: https://api.mobpae.com
         run: npm run build
+
+      - name: Verify build
+        run: |
+          test -f dist/index.html
+          echo "Landing production build verified"
 
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
           echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
+
           ssh-keyscan -H "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts
 
       - name: Deploy Landing
         run: |
-          rsync -avz --delete \
-            -e "ssh -i ~/.ssh/id_ed25519" \
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes" \
             dist/ \
             "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/mobpae/landing/"
+
+      - name: Verify production
+        run: |
+          curl --fail --silent --show-error \
+            --retry 5 \
+            --retry-delay 2 \
+            https://mobpae.com/ > /dev/null
+
+          echo "Landing production deployment successful"
