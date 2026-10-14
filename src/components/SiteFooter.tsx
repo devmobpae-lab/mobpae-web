@@ -64,7 +64,10 @@ export function SiteFooter() {
             </div>
             <div className="mpw-contact-line">
               <MapPin size={18} aria-hidden="true" />
-              <span>Gujarat, Ahmedabad — 382470</span>
+              <span>
+                D-1104, Carmel, Godrej Garden City, Ahmedabad, Gujarat –
+                382470, India
+              </span>
             </div>
             <div className="mpw-follow">
               <span>Follow us on:</span>
@@ -129,7 +132,8 @@ export function SiteFooter() {
             <img src="/logo.svg" alt="MobPae" />
           </Link>
           <p>
-            Copyright © {new Date().getFullYear()} MobPae | All Rights Reserved
+            Copyright © {new Date().getFullYear()} Mobpae Services Private
+            Limited (CIN: U70200GJ2026PTC178414) | All Rights Reserved
           </p>
           <span className="mpw-made-in-india">
             <span aria-hidden="true">🇮🇳</span> Made in India

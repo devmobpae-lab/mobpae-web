@@ -174,8 +174,8 @@ export function ContactPage() {
                 />
                 <ContactItem
                   icon={<MapPin size={20} aria-hidden="true" />}
-                  label="Address"
-                  value="Gujarat, Ahmedabad — 382470"
+                  label="Registered Office"
+                  value="Mobpae Services Private Limited, D-1104, Carmel, Godrej Garden City, Ahmedabad, Gujarat – 382470, India"
                 />
               </div>
             </div>
@@ -345,7 +345,7 @@ function DocPage({
 const privacySections: DocSection[] = [
   {
     title: "Who we are",
-    body: "MobPae provides employer-powered earned wage access: employees may request a portion of wages already earned, employers approve requests, and recovery is designed to follow the payroll cycle. We operate from Gujarat, Ahmedabad — 382470, India. Privacy questions: support@mobpae.com.",
+    body: "MobPae is owned and operated by Mobpae Services Private Limited (CIN: U70200GJ2026PTC178414). We provide employer-powered earned wage access: employees may request a portion of wages already earned, employers approve requests, and recovery is designed to follow the payroll cycle. Registered Office: D-1104, Carmel, Godrej Garden City, Ahmedabad, Gujarat – 382470, India. Privacy questions: support@mobpae.com.",
   },
   {
     title: "What this policy covers",
@@ -404,7 +404,7 @@ const privacySections: DocSection[] = [
   },
   {
     title: "Changes and contact",
-    body: "We may update this policy as the product and the law change. For privacy requests: support@mobpae.com, MobPae, Gujarat, Ahmedabad — 382470, India.",
+    body: "We may update this policy as the product and the law change. For privacy requests: support@mobpae.com, Mobpae Services Private Limited, D-1104, Carmel, Godrej Garden City, Ahmedabad, Gujarat – 382470, India.",
   },
 ];
 
@@ -453,7 +453,7 @@ const termsSections: DocSection[] = [
   },
   {
     title: "Changes and contact",
-    body: "We may revise these terms. Continued use of the website after an update means you accept the new terms. Questions: support@mobpae.com, MobPae, Gujarat, Ahmedabad — 382470, India.",
+    body: "We may revise these terms. Continued use of the website after an update means you accept the new terms. Questions: support@mobpae.com, Mobpae Services Private Limited (CIN: U70200GJ2026PTC178414), D-1104, Carmel, Godrej Garden City, Ahmedabad, Gujarat – 382470, India.",
   },
 ];
 
@@ -462,7 +462,7 @@ export function PrivacyPolicyPage() {
     <DocPage
       eyebrow="Privacy Policy"
       title="How MobPae collects, uses, and protects information."
-      lastUpdated="Last updated 15 August 2026. This draft policy covers the MobPae website, enquiry forms, and — once you are onboarded — the employee app, employer dashboard, and admin operations. You can ask us to revise any clause."
+      lastUpdated="Last updated 15 August 2026. This policy covers the MobPae website, enquiry forms, and — once you are onboarded — the employee app, employer dashboard, and admin operations."
       sections={privacySections}
     />
   );
@@ -473,7 +473,7 @@ export function TermsPage() {
     <DocPage
       eyebrow="Terms & Conditions"
       title="Terms for the MobPae website and public product information."
-      lastUpdated="Last updated 15 August 2026. These draft terms govern use of this website and information we publish about earned wage access. They are not a customer master agreement. Please review and tell us what to change."
+      lastUpdated="Last updated 15 August 2026. These terms govern use of this website and information we publish about earned wage access. They are not a customer master agreement."
       sections={termsSections}
     />
   );

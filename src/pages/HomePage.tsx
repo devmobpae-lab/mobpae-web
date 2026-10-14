@@ -812,6 +812,12 @@ export function HomePage() {
                 transparent ecosystem built around{" "}
                 <mark>financial wellness</mark>.
               </p>
+              <p>
+                MobPae is owned and operated by Mobpae Services Private
+                Limited (CIN: U70200GJ2026PTC178414), registered office at
+                D-1104, Carmel, Godrej Garden City, Ahmedabad, Gujarat –
+                382470, India.
+              </p>
               <p className="mpw-story__note">
                 <em>Built with payroll, not around it.</em>
               </p>
