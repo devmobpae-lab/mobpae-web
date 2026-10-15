@@ -410,6 +410,10 @@ const privacySections: DocSection[] = [
 
 const termsSections: DocSection[] = [
   {
+    title: "Who we are",
+    body: "This website is owned and operated by Mobpae Services Private Limited (CIN: U70200GJ2026PTC178414), registered office at D-1104, Carmel, Godrej Garden City, Ahmedabad, Gujarat – 382470, India.",
+  },
+  {
     title: "Agreement",
     body: "By using this website you agree to these terms and to our Privacy Policy. If you do not agree, do not use the site. Live app or dashboard use is also governed by onboarding documents, employer policy, and any partner terms that apply to disbursal.",
   },
@@ -462,7 +466,7 @@ export function PrivacyPolicyPage() {
     <DocPage
       eyebrow="Privacy Policy"
       title="How MobPae collects, uses, and protects information."
-      lastUpdated="Last updated 15 August 2026. This policy covers the MobPae website, enquiry forms, and — once you are onboarded — the employee app, employer dashboard, and admin operations."
+      lastUpdated="Last updated 14 October 2026. This policy covers the MobPae website, enquiry forms, and — once you are onboarded — the employee app, employer dashboard, and admin operations."
       sections={privacySections}
     />
   );
@@ -473,7 +477,7 @@ export function TermsPage() {
     <DocPage
       eyebrow="Terms & Conditions"
       title="Terms for the MobPae website and public product information."
-      lastUpdated="Last updated 15 August 2026. These terms govern use of this website and information we publish about earned wage access. They are not a customer master agreement."
+      lastUpdated="Last updated 14 October 2026. These terms govern use of this website and information we publish about earned wage access. They are not a customer master agreement."
       sections={termsSections}
     />
   );
